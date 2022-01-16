@@ -23,13 +23,14 @@ $phone-screen-font-size: 1.25rem;
 $phone-screen-max-height: 35%;
 
 $phone-keyboard-template-cols: 1fr 1fr 1fr;
-$phone-keyboard-template-rows: 1fr 1fr 1fr 1fr 1fr;
+$phone-keyboard-template-rows: 1.25fr 1fr 1fr 1fr 1fr;
 $phone-keyboard-width: 100%;
 $phone-keyboard-gap: 1rem;
 
 $phone-keyboard-key-bg: rgb(62, 62, 62);
 $phone-keyboard-key-bg--hover: lighten($phone-keyboard-key-bg, 6%);
 $phone-keyboard-key-color: rgb(156, 156, 156);
+$phone-keyboard-key-height: 26px;
 $phone-keyboard-key-radius: 1rem;
 $phone-keyboard-key-gap: 1rem;
 $phone-keyboard-key-padding: 0.35rem 1rem;
