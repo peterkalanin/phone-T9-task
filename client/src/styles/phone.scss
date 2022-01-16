@@ -48,6 +48,57 @@
       font-size: $phone-screen-font-size;
       font-smooth: never;
       -webkit-font-smoothing: none;
+
+      .phone-screen {
+        overflow: auto;
+        flex-grow: 1;
+        color: $phone-screen-color;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .phone-text {
+        }
+
+        .phone-lines {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+
+          .phone-line {
+            &.selected {
+              color: $phone-screen-bg;
+              background-color: $phone-screen-color;
+            }
+
+            &::before {
+              content: "> ";
+            }
+          }
+        }
+
+        .phone-actions {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &::-webkit-scrollbar {
+          width: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #000;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background: #333;
+        }
+      }
     }
 
     .phone-keyboard {
