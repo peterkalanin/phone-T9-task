@@ -1,0 +1,32 @@
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 90vw;
+
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $phone-width;
+    height: $phone-height;
+    flex-grow: 1;
+    gap: $phone-content-gap;
+    padding: $phone-padding;
+    background: $phone-bg;
+    border-radius: $phone-radius;
+    box-shadow: $phone-box-shadow;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .phone-wrapper {
+    width: unset;
+
+    .phone {
+      width: $phone-width--md;
+      height: $phone-height--md;
+    }
+  }
+}

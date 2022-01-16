@@ -6,5 +6,9 @@ export default function Phone() {
 
   useEffect(() => {}, [numberKeys]);
 
-  return <div></div>;
+  return (
+    <div className='phone-wrapper'>
+      <div className='phone'></div>
+    </div>
+  );
 }
