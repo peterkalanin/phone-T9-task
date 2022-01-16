@@ -47,6 +47,7 @@ export default function Phone() {
    */
   const onRightControlButtonClick = () => {
     console.log("Right control button event");
+    setNumberKeys([]);
   };
 
   return (
