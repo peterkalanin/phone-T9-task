@@ -23,6 +23,14 @@ export default function Phone() {
     { key: '#', letters: ['⇧'] },
   ];
 
+  /**
+   *
+   * @param {*} button
+   */
+  const onButtonClick = (button) => {
+    console.log(button);
+  };
+
   return (
     <div className='phone-wrapper'>
       <div className='phone'>
@@ -38,7 +46,7 @@ export default function Phone() {
           <div></div>
           <PhoneControlButton />
           {buttons.map((button, index) => (
-            <PhoneKeyButton button={button} key={index} />
+            <PhoneKeyButton button={button} key={index} click={onButtonClick} />
           ))}
         </div>
       </div>
