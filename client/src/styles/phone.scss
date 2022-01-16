@@ -57,6 +57,10 @@
       width: $phone-keyboard-width;
       gap: $phone-keyboard-gap;
 
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+
       .phone-keybutton {
         background: $phone-keyboard-key-bg;
         display: flex;
@@ -77,6 +81,7 @@
         .phone-keybutton-letters {
           font-size: $phone-keyboard-key-letters-font-size;
           flex-grow: 1;
+          text-align: right;
         }
       }
     }
