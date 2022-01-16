@@ -31,6 +31,22 @@ export default function Phone() {
     console.log(button);
   };
 
+  /**
+   * Function triggers on left control button.
+   * TODO: missing functionality
+   */
+  const onLeftControlButtonClick = () => {
+    console.log('Left control button event');
+  };
+
+  /**
+   * Function triggers on right control button.
+   * TODO: missing functionality
+   */
+  const onRightControlButtonClick = () => {
+    console.log('Right control button event');
+  };
+
   return (
     <div className='phone-wrapper'>
       <div className='phone'>
@@ -42,9 +58,9 @@ export default function Phone() {
         </div>
         <div className='phone-screen-wrapper'></div>
         <div className='phone-keyboard'>
-          <PhoneControlButton />
+          <PhoneControlButton click={onLeftControlButtonClick} />
           <div></div>
-          <PhoneControlButton />
+          <PhoneControlButton click={onRightControlButtonClick} />
           {buttons.map((button, index) => (
             <PhoneKeyButton button={button} key={index} click={onButtonClick} />
           ))}

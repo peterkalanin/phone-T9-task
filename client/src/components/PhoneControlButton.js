@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function PhoneControlButton() {
+export default function PhoneControlButton(props) {
   return (
-    <div className='phone-keybutton'>
+    <div className='phone-keybutton' onClick={() => props.click()}>
       <div className='phone-keybutton-control'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
