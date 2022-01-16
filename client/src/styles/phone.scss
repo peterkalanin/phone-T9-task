@@ -49,6 +49,14 @@
       font-smooth: never;
       -webkit-font-smoothing: none;
     }
+
+    .phone-keyboard {
+      display: grid;
+      grid-template-columns: $phone-keyboard-template-cols;
+      grid-template-rows: $phone-keyboard-template-rows;
+      width: $phone-keyboard-width;
+      gap: $phone-keyboard-gap;
+    }
   }
 }
 

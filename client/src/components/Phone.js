@@ -16,6 +16,7 @@ export default function Phone() {
           <div className='phone-speaker-dot'></div>
         </div>
         <div className='phone-screen-wrapper'></div>
+        <div className='phone-keyboard'></div>
       </div>
     </div>
   );
