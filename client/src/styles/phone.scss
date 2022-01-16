@@ -30,6 +30,25 @@
         height: $phone-speaker-dot-size;
       }
     }
+
+    .phone-screen-wrapper {
+      width: $phone-screen-width;
+      background: $phone-screen-bg;
+      border-radius: $phone-screen-radius;
+      max-height: $phone-screen-max-height;
+      flex-grow: 1;
+
+      padding: $phone-screen-padding;
+      box-shadow: $phone-screen-box-shadow;
+
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      font-family: monospace;
+      font-size: $phone-screen-font-size;
+      font-smooth: never;
+      -webkit-font-smoothing: none;
+    }
   }
 }
 

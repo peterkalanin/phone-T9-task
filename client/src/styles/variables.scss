@@ -12,4 +12,12 @@ $phone-height--md: 560px;
 $phone-speaker-bg: rgb(24, 24, 24);
 $phone-speaker-width: 25%;
 $phone-speaker-dot-size: 0.65rem;
-$phone-speaker-dot-radius: $phone-speaker-dot-size / 2;
+$phone-speaker-dot-radius: calc($phone-speaker-dot-size / 2);
+
+$phone-screen-bg: rgb(128, 173, 108);
+$phone-screen-box-shadow: 0px 0px 12px $phone-screen-bg;
+$phone-screen-radius: 1rem;
+$phone-screen-padding: calc($phone-screen-radius / 2) $phone-screen-radius;
+$phone-screen-width: calc(100% - ($phone-screen-radius * 2));
+$phone-screen-font-size: 1.25rem;
+$phone-screen-max-height: 35%;
