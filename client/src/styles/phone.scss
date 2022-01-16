@@ -17,6 +17,19 @@
     background: $phone-bg;
     border-radius: $phone-radius;
     box-shadow: $phone-box-shadow;
+
+    .phone-speaker {
+      width: $phone-speaker-width;
+      display: flex;
+      justify-content: space-around;
+
+      .phone-speaker-dot {
+        background: $phone-speaker-bg;
+        border-radius: $phone-speaker-dot-radius;
+        width: $phone-speaker-dot-size;
+        height: $phone-speaker-dot-size;
+      }
+    }
   }
 }
 

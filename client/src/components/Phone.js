@@ -8,7 +8,14 @@ export default function Phone() {
 
   return (
     <div className='phone-wrapper'>
-      <div className='phone'></div>
+      <div className='phone'>
+        <div className='phone-speaker'>
+          <div className='phone-speaker-dot'></div>
+          <div className='phone-speaker-dot'></div>
+          <div className='phone-speaker-dot'></div>
+          <div className='phone-speaker-dot'></div>
+        </div>
+      </div>
     </div>
   );
 }
