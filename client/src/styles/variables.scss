@@ -1,0 +1,46 @@
+$phone-bg: rgb(48, 48, 48);
+$phone-radius: 2rem;
+$phone-padding: 2rem 1rem;
+$phone-content-gap: 2rem;
+$phone-box-shadow: 4px 4px 12px 4px rgba(1, 1, 1, 0.25);
+
+$phone-width: 100%;
+$phone-height: 90%;
+$phone-width--md: 280px;
+$phone-height--md: 560px;
+
+$phone-speaker-bg: rgb(24, 24, 24);
+$phone-speaker-width: 25%;
+$phone-speaker-dot-size: 0.65rem;
+$phone-speaker-dot-radius: calc($phone-speaker-dot-size / 2);
+
+$phone-screen-bg: rgb(128, 173, 108);
+$phone-screen-color: rgb(24, 24, 24);
+$phone-screen-box-shadow: 0px 0px 12px $phone-screen-bg;
+$phone-screen-radius: 1rem;
+$phone-screen-padding: calc($phone-screen-radius / 2) $phone-screen-radius;
+$phone-screen-width: calc(100% - ($phone-screen-radius * 2));
+$phone-screen-font-size: 1.25rem;
+$phone-screen-max-height: 35%;
+
+$phone-keyboard-template-cols: 1fr 1fr 1fr;
+$phone-keyboard-template-rows: 1.25fr 1fr 1fr 1fr 1fr;
+$phone-keyboard-width: 100%;
+$phone-keyboard-gap: 1rem;
+
+$phone-keyboard-key-bg: rgb(62, 62, 62);
+$phone-keyboard-key-bg--hover: lighten($phone-keyboard-key-bg, 6%);
+$phone-keyboard-key-color: rgb(156, 156, 156);
+$phone-keyboard-key-height: 26px;
+$phone-keyboard-key-radius: 1rem;
+$phone-keyboard-key-gap: 1rem;
+$phone-keyboard-key-padding: 0.35rem 1rem;
+$phone-keyboard-key-box-shadow-color: rgba(0, 0, 0, 0.25);
+$phone-keyboard-key-box-shadow: -1px 1px $phone-keyboard-key-box-shadow-color,
+  -1px 1px $phone-keyboard-key-box-shadow-color,
+  -2px 2px $phone-keyboard-key-box-shadow-color,
+  -2px 2px $phone-keyboard-key-box-shadow-color,
+  -2px 1px $phone-keyboard-key-box-shadow-color;
+
+$phone-keyboard-key-number-font-size: 1.35rem;
+$phone-keyboard-key-letters-font-size: 0.75rem;
