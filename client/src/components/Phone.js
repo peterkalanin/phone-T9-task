@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import PhoneKeyButton from './PhoneKeyButton';
+import PhoneControlButton from './PhoneControlButton';
 
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
@@ -33,6 +34,9 @@ export default function Phone() {
         </div>
         <div className='phone-screen-wrapper'></div>
         <div className='phone-keyboard'>
+          <PhoneControlButton />
+          <div></div>
+          <PhoneControlButton />
           {buttons.map((button, index) => (
             <PhoneKeyButton button={button} key={index} />
           ))}

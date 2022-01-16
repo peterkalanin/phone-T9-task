@@ -83,6 +83,12 @@
           flex-grow: 1;
           text-align: right;
         }
+
+        .phone-keybutton-control {
+          svg {
+            fill: $phone-keyboard-key-color;
+          }
+        }
       }
     }
   }
