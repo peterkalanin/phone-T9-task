@@ -26,3 +26,18 @@ $phone-keyboard-template-cols: 1fr 1fr 1fr;
 $phone-keyboard-template-rows: 1fr 1fr 1fr 1fr;
 $phone-keyboard-width: 100%;
 $phone-keyboard-gap: 1rem;
+
+$phone-keyboard-key-bg: rgb(62, 62, 62);
+$phone-keyboard-key-color: rgb(156, 156, 156);
+$phone-keyboard-key-radius: 1rem;
+$phone-keyboard-key-gap: 1rem;
+$phone-keyboard-key-padding: 0.35rem 1rem;
+$phone-keyboard-key-box-shadow-color: rgba(0, 0, 0, 0.25);
+$phone-keyboard-key-box-shadow: -1px 1px $phone-keyboard-key-box-shadow-color,
+  -1px 1px $phone-keyboard-key-box-shadow-color,
+  -2px 2px $phone-keyboard-key-box-shadow-color,
+  -2px 2px $phone-keyboard-key-box-shadow-color,
+  -2px 1px $phone-keyboard-key-box-shadow-color;
+
+$phone-keyboard-key-number-font-size: 1.35rem;
+$phone-keyboard-key-letters-font-size: 0.75rem;

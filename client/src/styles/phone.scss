@@ -56,6 +56,29 @@
       grid-template-rows: $phone-keyboard-template-rows;
       width: $phone-keyboard-width;
       gap: $phone-keyboard-gap;
+
+      .phone-keybutton {
+        background: $phone-keyboard-key-bg;
+        display: flex;
+        color: $phone-keyboard-key-color;
+        border-radius: $phone-keyboard-key-radius;
+        padding: $phone-keyboard-key-padding;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: $phone-keyboard-key-gap;
+
+        box-shadow: $phone-keyboard-key-box-shadow;
+
+        .phone-keybutton-number {
+          font-size: $phone-keyboard-key-number-font-size;
+        }
+
+        .phone-keybutton-letters {
+          font-size: $phone-keyboard-key-letters-font-size;
+          flex-grow: 1;
+        }
+      }
     }
   }
 }
