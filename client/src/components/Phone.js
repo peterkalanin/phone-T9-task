@@ -29,7 +29,6 @@ export default function Phone() {
    * @param {*} button
    */
   const onButtonClick = (button) => {
-    console.log(button);
     setNumberKeys([...numberKeys, button.key]);
   };
 
@@ -37,16 +36,13 @@ export default function Phone() {
    * Function triggers on left control button.
    * TODO: missing functionality
    */
-  const onLeftControlButtonClick = () => {
-    console.log("Left control button event");
-  };
+  const onLeftControlButtonClick = () => {};
 
   /**
    * Function triggers on right control button.
    * TODO: missing functionality
    */
   const onRightControlButtonClick = () => {
-    console.log("Right control button event");
     setNumberKeys([]);
   };
 
