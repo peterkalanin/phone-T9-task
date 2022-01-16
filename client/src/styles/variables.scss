@@ -28,6 +28,7 @@ $phone-keyboard-width: 100%;
 $phone-keyboard-gap: 1rem;
 
 $phone-keyboard-key-bg: rgb(62, 62, 62);
+$phone-keyboard-key-bg--hover: lighten($phone-keyboard-key-bg, 6%);
 $phone-keyboard-key-color: rgb(156, 156, 156);
 $phone-keyboard-key-radius: 1rem;
 $phone-keyboard-key-gap: 1rem;

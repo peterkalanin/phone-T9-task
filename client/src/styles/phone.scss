@@ -89,6 +89,15 @@
             fill: $phone-keyboard-key-color;
           }
         }
+
+        &:hover {
+          background: $phone-keyboard-key-bg--hover;
+        }
+
+        &:active {
+          box-shadow: none;
+          transform: translate(-1px, 1px);
+        }
       }
     }
   }
