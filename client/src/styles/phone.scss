@@ -59,6 +59,12 @@
         gap: 1rem;
 
         .phone-text {
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $phone-screen-color;
+
+          &::before {
+            content: "> ";
+          }
         }
 
         .phone-lines {
@@ -70,10 +76,6 @@
             &.selected {
               color: $phone-screen-bg;
               background-color: $phone-screen-color;
-            }
-
-            &::before {
-              content: "> ";
             }
           }
         }

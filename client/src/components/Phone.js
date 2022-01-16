@@ -30,6 +30,7 @@ export default function Phone() {
    */
   const onButtonClick = (button) => {
     console.log(button);
+    setNumberKeys([...numberKeys, button.key]);
   };
 
   /**
@@ -58,7 +59,7 @@ export default function Phone() {
           <div className="phone-speaker-dot"></div>
         </div>
         <div className="phone-screen-wrapper">
-          <PhoneScreen />
+          <PhoneScreen text={numberKeys} />
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
