@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import PhoneButton from './PhoneButton';
+import PhoneKeyButton from './PhoneKeyButton';
 
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
@@ -34,7 +34,7 @@ export default function Phone() {
         <div className='phone-screen-wrapper'></div>
         <div className='phone-keyboard'>
           {buttons.map((button, index) => (
-            <PhoneButton button={button} key={index} />
+            <PhoneKeyButton button={button} key={index} />
           ))}
         </div>
       </div>
