@@ -62,7 +62,7 @@ export default function Phone() {
           <div className="phone-speaker-dot"></div>
         </div>
         <div className="phone-screen-wrapper">
-          <PhoneScreen text={numberKeys} />
+          <PhoneScreen text={numberKeys} words={words} />
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
