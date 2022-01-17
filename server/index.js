@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const WordsController = require('./controllers/words.controller');
 
@@ -10,6 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
+app.use(cors())
 
 app.post('/words', WordsController.getWords);
 
