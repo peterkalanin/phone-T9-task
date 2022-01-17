@@ -10,11 +10,7 @@ const WordsController = {
     getWords: (req, resp) => {
         const body = req.body;
         let reqKeys = body['keys[]'];
-
-        console.log(reqKeys);
-
         let words = WordsService.getLetterCombinations(reqKeys);
-
         resp.json(words || []);
     }
 }
