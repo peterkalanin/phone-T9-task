@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import PhoneKeyButton from "./PhoneKeyButton";
 import PhoneControlButton from "./PhoneControlButton";
 import PhoneScreen from "./PhoneScreen";
+import WordsService from "../services/words.service";
 
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
 
-  useEffect(() => {}, [numberKeys]);
+  useEffect(() => {
+    console.log(WordsService.getWords({ keys: ["1", "5"] }));
+  }, [numberKeys]);
 
   const buttons = [
     { key: "1", letters: [""] },
