@@ -3,11 +3,17 @@ import { useState, useEffect } from "react";
 import PhoneKeyButton from "./PhoneKeyButton";
 import PhoneControlButton from "./PhoneControlButton";
 import PhoneScreen from "./PhoneScreen";
+import WordsService from "../services/words.service";
 
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
+  const [words, setWords] = useState([]);
 
-  useEffect(() => {}, [numberKeys]);
+  useEffect(() => {
+    WordsService.getWords({ keys: [numberKeys] }).then((res) => {
+      setWords(res);
+    });
+  }, [numberKeys]);
 
   const buttons = [
     { key: "1", letters: [""] },
@@ -56,7 +62,7 @@ export default function Phone() {
           <div className="phone-speaker-dot"></div>
         </div>
         <div className="phone-screen-wrapper">
-          <PhoneScreen text={numberKeys} />
+          <PhoneScreen text={numberKeys} words={words} />
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
