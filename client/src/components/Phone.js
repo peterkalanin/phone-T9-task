@@ -8,7 +8,7 @@ import WordsService from "../services/words.service";
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
   const [words, setWords] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState([]);
 
   useEffect(() => {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
@@ -50,11 +50,15 @@ export default function Phone() {
    * TODO: missing functionality
    */
   const onRightControlButtonClick = () => {
-    setNumberKeys([]);
+    if (numberKeys.length > 0) {
+      setNumberKeys([]);
+    } else {
+      setText(text.splice(0, text.length - 1));
+    }
   };
 
   const addWordToText = (word) => {
-    setText(text + `${word} `);
+    setText([...text, word]);
     setNumberKeys([]);
   };
 
