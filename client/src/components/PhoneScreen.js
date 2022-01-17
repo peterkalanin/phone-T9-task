@@ -6,14 +6,16 @@ export default function PhoneScreen(props) {
 
   const text = props.text;
   const words = props.words;
+  const numberKeys = props.numberKeys;
+  console.log(props)
 
   return (
     <div className="phone-screen">
-      <div className="phone-text">{text}</div>
+      <div className="phone-text">{text} {numberKeys}</div>
       <div className="phone-lines">
         {words.map((word, index) => {
           return (
-            <div className="phone-line" key={index}>
+            <div className="phone-line" key={index} onClick={() => props.wordSelect(word)}>
               {word}
             </div>
           );

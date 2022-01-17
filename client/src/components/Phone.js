@@ -8,6 +8,7 @@ import WordsService from "../services/words.service";
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
   const [words, setWords] = useState([]);
+  const [text, setText] = useState("");
 
   useEffect(() => {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
@@ -52,6 +53,11 @@ export default function Phone() {
     setNumberKeys([]);
   };
 
+  const addWordToText = (word) => {
+    setText(text + `${word} `);
+    setNumberKeys([]);
+  };
+
   return (
     <div className="phone-wrapper">
       <div className="phone">
@@ -62,7 +68,12 @@ export default function Phone() {
           <div className="phone-speaker-dot"></div>
         </div>
         <div className="phone-screen-wrapper">
-          <PhoneScreen text={numberKeys} words={words} />
+          <PhoneScreen
+            text={text}
+            numberKeys={numberKeys}
+            words={words}
+            wordSelect={addWordToText}
+          />
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
