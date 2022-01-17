@@ -7,7 +7,6 @@ export default function PhoneScreen(props) {
   const text = props.text;
   const words = props.words;
   const numberKeys = props.numberKeys;
-  console.log(props)
 
   return (
     <div className="phone-screen">
