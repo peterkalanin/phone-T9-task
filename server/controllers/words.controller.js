@@ -15,7 +15,7 @@ const WordsController = {
 
         let words = WordsService.getLetterCombinations(reqKeys);
 
-        resp.json(words);
+        resp.json(words || []);
     }
 }
 
