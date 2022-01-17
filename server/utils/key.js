@@ -15,7 +15,7 @@ const buttonKeyLetters = {
 
 const lettersButtonKeys = {};
 Object.keys(buttonKeyLetters).forEach((key) => {
-    const letters = keys[key];
+    const letters = buttonKeyLetters[key];
     if (!letters) {
         return;
     }
