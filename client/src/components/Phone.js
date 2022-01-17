@@ -10,7 +10,7 @@ export default function Phone() {
   const [words, setWords] = useState([]);
 
   useEffect(() => {
-    WordsService.getWords({ keys: [numberKeys] }).then((res) => {
+    WordsService.getWords({ keys: numberKeys }).then((res) => {
       setWords(res);
     });
   }, [numberKeys]);
