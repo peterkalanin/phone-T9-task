@@ -7,9 +7,12 @@ import WordsService from "../services/words.service";
 
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
+  const [words, setWords] = useState([]);
 
   useEffect(() => {
-    console.log(WordsService.getWords({ keys: ["1", "5"] }));
+    WordsService.getWords({ keys: [numberKeys] }).then((res) => {
+      setWords(res);
+    });
   }, [numberKeys]);
 
   const buttons = [
