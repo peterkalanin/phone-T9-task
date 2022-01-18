@@ -46,7 +46,11 @@ export default function Phone() {
    * Function triggers on left control button.
    * TODO: missing functionality
    */
-  const onLeftControlButtonClick = () => {};
+  const onLeftControlButtonClick = () => {
+    if (focusIndex !== undefined) {
+      addWordToText(suggested[focusIndex]);
+    }
+  };
 
   /**
    * Function triggers on right control button.
