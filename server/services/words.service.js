@@ -30,6 +30,15 @@ const WordsService = {
           return arr;
         });
   },
+
+  /**
+   * Returns most common words with coresponding to buttonKeys
+   * @param {string[]} buttonKeys 
+   * @returns {string[]}
+   */
+  getMostCommonWords: (buttonKeys) => {
+    return [];
+  },
 };
 
 module.exports = WordsService;
