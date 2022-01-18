@@ -80,6 +80,10 @@
             padding-right: 0.25rem;
             cursor: pointer;
 
+            &.is-suggested {
+              font-weight: bold;
+            }
+
             &.selected,
             &:hover {
               color: $phone-screen-bg;

@@ -5,7 +5,8 @@ export default function PhoneScreen(props) {
   const rightActionLabel = "Clean";
 
   const text = props.text;
-  const words = props.words;
+  const words = props.words || [];
+  const suggested = props.suggested || [];
   const numberKeys = props.numberKeys;
 
   return (
@@ -14,6 +15,17 @@ export default function PhoneScreen(props) {
         {(text || []).join(" ")} {numberKeys}
       </div>
       <div className="phone-lines">
+        {suggested.map((word, index) => {
+          return (
+            <div
+              className="phone-line is-suggested"
+              key={index}
+              onClick={() => props.wordSelect(word)}
+            >
+              {word}
+            </div>
+          );
+        })}
         {words.map((word, index) => {
           return (
             <div
