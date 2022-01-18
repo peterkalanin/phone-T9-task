@@ -10,6 +10,7 @@ export default function Phone() {
   const [words, setWords] = useState([]);
   const [suggested, setSuggested] = useState([]);
   const [text, setText] = useState([]);
+  const [focusIndex, setFocusIndex] = useState(undefined);
 
   useEffect(() => {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
@@ -59,6 +60,22 @@ export default function Phone() {
     }
   };
 
+  const onMiddleLeftControlClick = () => {
+    if (focusIndex === undefined) {
+      setFocusIndex(0);
+    } else if (focusIndex > 0) {
+      setFocusIndex(focusIndex - 1);
+    }
+  };
+
+  const onMiddleRightControlClick = () => {
+    if (focusIndex === undefined) {
+      setFocusIndex(0);
+    } else if (focusIndex < suggested.length - 1) {
+      setFocusIndex(focusIndex + 1);
+    }
+  };
+
   const addWordToText = (word) => {
     setText([...text, word]);
     setNumberKeys([]);
@@ -80,6 +97,7 @@ export default function Phone() {
             words={words}
             suggested={suggested}
             wordSelect={addWordToText}
+            focusIndex={focusIndex}
           />
         </div>
         <div className="phone-keyboard">
@@ -87,11 +105,11 @@ export default function Phone() {
           <div className="middle-button-wrapper">
             <PhoneControlButton
               noIcon="true"
-              click={onLeftControlButtonClick}
+              click={onMiddleLeftControlClick}
             />
             <PhoneControlButton
               noIcon="true"
-              click={onLeftControlButtonClick}
+              click={onMiddleRightControlClick}
             />
           </div>
           <PhoneControlButton click={onRightControlButtonClick} />

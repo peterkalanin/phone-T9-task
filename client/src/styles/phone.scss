@@ -84,7 +84,7 @@
               font-weight: bold;
             }
 
-            &.selected,
+            &.focused,
             &:hover {
               color: $phone-screen-bg;
               background-color: $phone-screen-color;
