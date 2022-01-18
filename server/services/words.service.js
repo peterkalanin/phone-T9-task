@@ -1,4 +1,7 @@
-const { buttonKeyLetters } = require("../utils/key");
+const {
+  buttonKeyLetters
+} = require("../utils/key");
+const words = require("../utils/words");
 
 const WordsService = {
   /**
@@ -30,6 +33,37 @@ const WordsService = {
           return arr;
         });
   },
+
+  /**
+   * Returns most common words with coresponding to buttonKeys
+   * @param {string[]} buttonKeys 
+   * @returns {string[]}
+   */
+  getSuggestedWords: (buttonKeys) => {
+    console.log(this.buttonKeys);
+    if (!Array.isArray(buttonKeys)) {
+      return;
+    }
+
+    return words.filter((w) => {
+      return w.keys == buttonKeys.join('');
+    }).map((p) => p.word);
+  },
+
+  /**
+   * 
+   * @param {string[]} words 
+   * @param {string[]} suggested 
+   * @returns {string[]}
+   */
+  prugeSuggestedFromWords: (words, suggested) => {
+    return words.filter(word => {
+      return !suggested.includes(word);
+    });
+  }
+
 };
+
+
 
 module.exports = WordsService;

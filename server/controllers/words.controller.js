@@ -10,8 +10,13 @@ const WordsController = {
     getWords: (req, resp) => {
         const body = req.body;
         let reqKeys = body['keys[]'];
-        let words = WordsService.getLetterCombinations(reqKeys);
-        resp.json(words || []);
+        let words = WordsService.getLetterCombinations(reqKeys) || [];
+        let suggested = WordsService.getSuggestedWords(reqKeys) || [];
+        words = WordsService.prugeSuggestedFromWords(words, suggested);
+        resp.json({
+            words,
+            suggested
+        });
     }
 }
 

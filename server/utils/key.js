@@ -35,7 +35,7 @@ const getKeyByLetter = (letter) => {
         return;
     }
 
-    return letterKeys[letter];
+    return lettersButtonKeys[letter];
 };
 
 module.exports = {
