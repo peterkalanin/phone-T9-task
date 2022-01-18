@@ -11,8 +11,10 @@ const WordsController = {
         const body = req.body;
         let reqKeys = body['keys[]'];
         let words = WordsService.getLetterCombinations(reqKeys) || [];
+        let suggested = WordsService.getMostCommonWords() || [];
         resp.json({
-            words
+            words,
+            suggested
         });
     }
 }

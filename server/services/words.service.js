@@ -1,4 +1,5 @@
 const { buttonKeyLetters } = require("../utils/key");
+const words = require("../utils/words");
 
 const WordsService = {
   /**
@@ -37,6 +38,7 @@ const WordsService = {
    * @returns {string[]}
    */
   getMostCommonWords: (buttonKeys) => {
+    console.log(words)
     return [];
   },
 };
