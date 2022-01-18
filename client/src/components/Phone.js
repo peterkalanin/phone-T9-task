@@ -8,11 +8,13 @@ import WordsService from "../services/words.service";
 export default function Phone() {
   const [numberKeys, setNumberKeys] = useState([]);
   const [words, setWords] = useState([]);
+  const [suggested, setSuggested] = useState([]);
   const [text, setText] = useState([]);
 
   useEffect(() => {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
-      setWords(res);
+      setWords(res.words);
+      setSuggested(res.suggested);
     });
   }, [numberKeys]);
 
@@ -76,6 +78,7 @@ export default function Phone() {
             text={text}
             numberKeys={numberKeys}
             words={words}
+            suggested={suggested}
             wordSelect={addWordToText}
           />
         </div>

@@ -10,6 +10,7 @@
   },
   "scripts": {
     "server:start": "node server/index.js",
-    "server:serve": "nodemon server/index.js"
+    "server:serve": "nodemon server/index.js",
+    "client:start": "npm --prefix ./client/ run start"
   }
 }
