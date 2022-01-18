@@ -2,6 +2,8 @@ import React from "react";
 
 export default function PhoneScreen(props) {
   const leftActionLabel = "Select";
+  const middleLeftActionLabel = "<";
+  const middleRightActionLabel = ">";
   const rightActionLabel = "Clean";
 
   const text = props.text;
@@ -40,7 +42,11 @@ export default function PhoneScreen(props) {
       </div>
       <div className="phone-actions">
         <div className="phone-action">{leftActionLabel}</div>
-        <div className="phone-action">{rightActionLabel}</div>
+        <div className="phone-actions-center">
+          <div className="phone-action">{middleLeftActionLabel}</div>
+          <div className="phone-action">{middleRightActionLabel}</div>
+        </div>
+        <div className="phone-action is-right">{rightActionLabel}</div>
       </div>
     </div>
   );

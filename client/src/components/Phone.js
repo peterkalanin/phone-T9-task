@@ -84,7 +84,16 @@ export default function Phone() {
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
-          <div></div>
+          <div className="middle-button-wrapper">
+            <PhoneControlButton
+              noIcon="true"
+              click={onLeftControlButtonClick}
+            />
+            <PhoneControlButton
+              noIcon="true"
+              click={onLeftControlButtonClick}
+            />
+          </div>
           <PhoneControlButton click={onRightControlButtonClick} />
           {buttons.map((button, index) => (
             <PhoneKeyButton button={button} key={index} click={onButtonClick} />
