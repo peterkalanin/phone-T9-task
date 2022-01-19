@@ -65,6 +65,9 @@ export default function Phone() {
     }
   };
 
+  /**
+   * Sets focusIndex to left if possible
+   */
   const onMiddleLeftControlClick = () => {
     if (focusIndex === undefined) {
       setFocusIndex(0);
@@ -73,6 +76,9 @@ export default function Phone() {
     }
   };
 
+  /**
+   * Sets focusIndex to right if possible
+   */
   const onMiddleRightControlClick = () => {
     if (focusIndex === undefined) {
       setFocusIndex(0);
@@ -81,6 +87,10 @@ export default function Phone() {
     }
   };
 
+  /**
+   * Add new words into text string
+   * @param {string} word 
+   */
   const addWordToText = (word) => {
     setText([...text, word]);
     setNumberKeys([]);
