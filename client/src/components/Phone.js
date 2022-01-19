@@ -82,7 +82,7 @@ export default function Phone() {
   const onMiddleRightControlClick = () => {
     if (focusIndex === undefined) {
       setFocusIndex(0);
-    } else if (focusIndex < suggested.length - 1) {
+    } else if (focusIndex < (suggested.length + words.length) - 1) {
       setFocusIndex(focusIndex + 1);
     }
   };

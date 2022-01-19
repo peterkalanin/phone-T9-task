@@ -12,8 +12,22 @@ export default function PhoneScreen(props) {
   const numberKeys = props.numberKeys;
   const focusIndex = props.focusIndex;
 
+  /**
+   * Checks if suggested word is focused
+   * @param {number} index 
+   * @returns {boolean}
+   */
   const isFocusedSuggested = (index) => {
     return focusIndex === index;
+  };
+
+  /**
+   * Checks if random word is focused
+   * @param {number} index 
+   * @returns {boolean}
+   */
+  const isFocusedWord = (index) => {
+    return focusIndex - suggested.length === index;
   };
 
   return (
@@ -38,7 +52,7 @@ export default function PhoneScreen(props) {
         {words.map((word, index) => {
           return (
             <div
-              className="phone-line"
+              className={`phone-line ${isFocusedWord(index) ? "focused" : ""}`}
               key={index}
               onClick={() => props.wordSelect(word)}
             >
