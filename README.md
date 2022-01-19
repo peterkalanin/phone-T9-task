@@ -22,3 +22,37 @@ Ways to go beyond the minimal solution could include for example:
 - great project setup
 - mobile app in React Native
 - filtering to include only real words based on a suitable word l
+
+
+## How to run application
+
+First install dependencies. To install dependecies run command `npm install` in __root__ folder and also in __client__ folder!
+
+To run server use command `npm run server:start`. Server will start listening on your localhost on port `3001`.
+
+Use `npm run client:start` to start client application. It will open a new tab in browser with url `http://localhost:3000/`.
+
+For more information check `package.json` file in root folder.
+
+## How to work with application
+
+Use the phone keypad to enter the number sequence. Each new number entered sends a request to the server and receives word sets. Words are made up of all possible combinations of given inputs. The server also responds with the most common words that match the input entered. The most common words are displayed in bold at the top of the list. Use the mouse or the phone buttons to select words. The words then appear at the top of the screen.
+
+## Structure
+
+```
+client/             = client application
+├── node_modules    = node modules folder for client
+├── public          = public folder
+└── src             = folder containing a client code
+    ├── components  = react components
+    ├── services    = services
+    └── styles      = application styles
+node_modules        = node modules folder for server
+server              = server application
+├── assets          = assets of server application
+├── controllers     = server controllers
+├── services        = server services
+├── utils           = folder with utlility functions
+└── index.js        = initial server file
+```
