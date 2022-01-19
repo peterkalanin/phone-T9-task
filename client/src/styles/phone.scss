@@ -4,6 +4,8 @@
   align-items: center;
   flex-grow: 1;
   width: 90vw;
+  height: 90vw;
+  min-height: 0;
 
   .phone {
     display: flex;
@@ -17,6 +19,7 @@
     background: $phone-bg;
     border-radius: $phone-radius;
     box-shadow: $phone-box-shadow;
+    justify-content: space-around;
 
     .phone-speaker {
       width: $phone-speaker-width;
