@@ -16,6 +16,7 @@ export default function Phone() {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
       setWords(res.words);
       setSuggested(res.suggested);
+      setFocusIndex(undefined);
     });
   }, [numberKeys]);
 
