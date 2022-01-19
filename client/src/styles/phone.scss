@@ -84,7 +84,7 @@
               font-weight: bold;
             }
 
-            &.selected,
+            &.focused,
             &:hover {
               color: $phone-screen-bg;
               background-color: $phone-screen-color;
@@ -109,8 +109,22 @@
         }
 
         .phone-actions {
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          // justify-content: space-between;
+          grid-template-columns: 1fr 1fr 1fr;
+          // gap: 2rem;
+
+          .phone-actions-center {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+          .is-right {
+            text-align: right;
+          }
         }
       }
     }
@@ -125,6 +139,11 @@
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
+
+      .middle-button-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
 
       .phone-keybutton {
         background: $phone-keyboard-key-bg;

@@ -10,11 +10,13 @@ export default function Phone() {
   const [words, setWords] = useState([]);
   const [suggested, setSuggested] = useState([]);
   const [text, setText] = useState([]);
+  const [focusIndex, setFocusIndex] = useState(undefined);
 
   useEffect(() => {
     WordsService.getWords({ keys: numberKeys }).then((res) => {
       setWords(res.words);
       setSuggested(res.suggested);
+      setFocusIndex(undefined);
     });
   }, [numberKeys]);
 
@@ -45,7 +47,15 @@ export default function Phone() {
    * Function triggers on left control button.
    * TODO: missing functionality
    */
-  const onLeftControlButtonClick = () => {};
+  const onLeftControlButtonClick = () => {
+    if (focusIndex !== undefined) {
+      if (focusIndex < suggested.length - 1) {
+        addWordToText(suggested[focusIndex]);
+      } else {
+        addWordToText(words[focusIndex - suggested.length]);
+      }
+    }
+  };
 
   /**
    * Function triggers on right control button.
@@ -59,6 +69,32 @@ export default function Phone() {
     }
   };
 
+  /**
+   * Sets focusIndex to left if possible
+   */
+  const onMiddleLeftControlClick = () => {
+    if (focusIndex === undefined) {
+      setFocusIndex(0);
+    } else if (focusIndex > 0) {
+      setFocusIndex(focusIndex - 1);
+    }
+  };
+
+  /**
+   * Sets focusIndex to right if possible
+   */
+  const onMiddleRightControlClick = () => {
+    if (focusIndex === undefined) {
+      setFocusIndex(0);
+    } else if (focusIndex < suggested.length + words.length - 1) {
+      setFocusIndex(focusIndex + 1);
+    }
+  };
+
+  /**
+   * Add new words into text string
+   * @param {string} word
+   */
   const addWordToText = (word) => {
     setText([...text, word]);
     setNumberKeys([]);
@@ -80,11 +116,21 @@ export default function Phone() {
             words={words}
             suggested={suggested}
             wordSelect={addWordToText}
+            focusIndex={focusIndex}
           />
         </div>
         <div className="phone-keyboard">
           <PhoneControlButton click={onLeftControlButtonClick} />
-          <div></div>
+          <div className="middle-button-wrapper">
+            <PhoneControlButton
+              noIcon="true"
+              click={onMiddleLeftControlClick}
+            />
+            <PhoneControlButton
+              noIcon="true"
+              click={onMiddleRightControlClick}
+            />
+          </div>
           <PhoneControlButton click={onRightControlButtonClick} />
           {buttons.map((button, index) => (
             <PhoneKeyButton button={button} key={index} click={onButtonClick} />
