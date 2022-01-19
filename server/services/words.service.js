@@ -40,7 +40,6 @@ const WordsService = {
    * @returns {string[]}
    */
   getSuggestedWords: (buttonKeys) => {
-    console.log(this.buttonKeys);
     if (!Array.isArray(buttonKeys)) {
       return;
     }
